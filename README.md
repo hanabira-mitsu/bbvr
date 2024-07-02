@@ -6,6 +6,7 @@ Based on [this](https://porkypowers.itch.io/baldi-open-source-classic-party) dec
 
 ## Issues
 - Some sprite layering issues with the XR Rig's hands.
+- Moving around IRL causes a desync with the player position. Recenter your playspace to resync.
 - The Quest version has various graphical issues. Nothing game breaking, but it doesn't look as nice as the PC version.
 
 ## Installation
