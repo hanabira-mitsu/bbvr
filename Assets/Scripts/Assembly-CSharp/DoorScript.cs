@@ -8,6 +8,8 @@ public class DoorScript : MonoBehaviour
 	private void Start()
 	{
 		this.myAudio = base.GetComponent<AudioSource>();
+		this.VRCamera = GameObject.Find("Main Camera");
+		this.XRRig = GameObject.Find("XR Rig");
 	}
 
 	// Token: 0x0600093B RID: 2363 RVA: 0x00021170 File Offset: 0x0001F570
@@ -39,7 +41,8 @@ public class DoorScript : MonoBehaviour
 		}
 		if (Input.GetButtonDown("XRI_Right_PrimaryButton") && Time.timeScale != 0f) //If the door is left clicked and the game isn't paused
 		{
-			Ray ray = Camera.main.ScreenPointToRay(new Vector3((float)(Screen.width / 2), (float)(Screen.height / 2), 0f));
+			Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
+
 			RaycastHit raycastHit;
 			if (Physics.Raycast(ray, out raycastHit) && (raycastHit.collider == this.trigger & Vector3.Distance(this.player.position, base.transform.position) < this.openingDistance & !this.bDoorLocked))
 			{
@@ -50,7 +53,7 @@ public class DoorScript : MonoBehaviour
 				this.OpenDoor();
 				if (this.silentOpens > 0) //If the door is silent
 				{
-					this.silentOpens--; //Decrease the amount of opens the door will stay quite for.
+					this.silentOpens--; //Decrease the amount of opens the door will stay quiet for.
 				}
 			}
 		}
@@ -107,6 +110,9 @@ public class DoorScript : MonoBehaviour
 	{
 		this.silentOpens = 4;
 	}
+
+	public GameObject VRCamera;
+	public GameObject XRRig;
 
 	// Token: 0x040005C3 RID: 1475
 	public float openingDistance;

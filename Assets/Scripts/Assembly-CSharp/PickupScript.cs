@@ -16,7 +16,7 @@ public class PickupScript : MonoBehaviour
 	{
 		if (Input.GetButtonDown("XRI_Right_PrimaryButton") && Time.timeScale != 0f)
 		{
-			Ray ray = Camera.main.ScreenPointToRay(new Vector3((float)(Screen.width / 2), (float)(Screen.height / 2), 0f));
+			Ray ray = Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f));
 			RaycastHit raycastHit;
 			if (Physics.Raycast(ray, out raycastHit))
 			{

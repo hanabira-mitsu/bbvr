@@ -69,11 +69,11 @@ public class GameControllerScript : MonoBehaviour
 					this.UnpauseGame();
 				}
 			}
-			if (Input.GetKeyDown(KeyCode.Y) & this.gamePaused)
+			if (Input.GetButtonDown("XRI_Left_PrimaryButton") & this.gamePaused)
 			{
 				this.ExitGame();
 			}
-			else if (Input.GetKeyDown(KeyCode.N) & this.gamePaused)
+			else if (Input.GetButtonDown("XRI_Left_SecondaryButton") & this.gamePaused)
 			{
 				this.UnpauseGame();
 			}
@@ -215,6 +215,7 @@ public class GameControllerScript : MonoBehaviour
 			Time.timeScale = 0f;
 			this.gamePaused = true;
 			this.pauseMenu.SetActive(true);
+
 		}
 	}
 
@@ -495,39 +496,12 @@ public class GameControllerScript : MonoBehaviour
 	private IEnumerator BootAnimation()
 	{
 		float time = 15f;
-		float height = 375f;
-		Vector3 position = default(Vector3);
 		this.boots.gameObject.SetActive(true);
-		while (height > -375f)
-		{
-			height -= 375f * Time.deltaTime;
-			time -= Time.deltaTime;
-			position = this.boots.localPosition;
-			position.y = height;
-			this.boots.localPosition = position;
-			yield return null;
-		}
-		position = this.boots.localPosition;
-		position.y = -375f;
-		this.boots.localPosition = position;
-		this.boots.gameObject.SetActive(false);
 		while (time > 0f)
 		{
 			time -= Time.deltaTime;
 			yield return null;
 		}
-		this.boots.gameObject.SetActive(true);
-		while (height < 375f)
-		{
-			height += 375f * Time.deltaTime;
-			position = this.boots.localPosition;
-			position.y = height;
-			this.boots.localPosition = position;
-			yield return null;
-		}
-		position = this.boots.localPosition;
-		position.y = 375f;
-		this.boots.localPosition = position;
 		this.boots.gameObject.SetActive(false);
 		yield break;
 	}
@@ -560,7 +534,7 @@ public class GameControllerScript : MonoBehaviour
 		this.exitsReached++;
 		if (this.exitsReached == 1)
 		{
-			RenderSettings.ambientLight = Color.red; //Make everything red and start player the weird sound
+			RenderSettings.ambientLight = new Color(1, 0, 0, 1f); //Make everything red and start player the weird sound
 			//RenderSettings.fog = true;
 			this.audioDevice.PlayOneShot(this.aud_Switch, 0.8f);
 			this.audioDevice.clip = this.aud_MachineQuiet;

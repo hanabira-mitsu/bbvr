@@ -12,7 +12,6 @@ public class PlayerScript : MonoBehaviour
 	// Token: 0x060009D3 RID: 2515 RVA: 0x00025C74 File Offset: 0x00024074
 	private void Start()
 	{
-		//Yeah your on your own for this one
 		if (PlayerPrefs.GetInt("AnalogMove") == 1)
 		{
 			this.sensitivityActive = true;
@@ -23,14 +22,15 @@ public class PlayerScript : MonoBehaviour
 		this.mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity");
 		this.principalBugFixer = 1;
 		this.flipaturn = 1f;
-		this.CameraRotation = this.VRCamera.transform.rotation;
+		//this.CameraRotation = this.VRCamera.transform.rotation;
 	}
 
 	// Token: 0x060009D4 RID: 2516 RVA: 0x00025D04 File Offset: 0x00024104
 	private void Update()
 	{
         this.CameraRotation = this.VRCamera.transform.rotation;
-        base.transform.position = new Vector3(base.transform.position.x, this.height, base.transform.position.z);
+		XRRig.transform.position = new Vector3(base.transform.position.x, XRRig.transform.position.y, base.transform.position.z);
+		base.transform.position = new Vector3(base.transform.position.x, this.height, base.transform.position.z);
 		this.MouseMove();
 		this.PlayerMove();
 		this.StaminaCheck();
@@ -51,6 +51,14 @@ public class PlayerScript : MonoBehaviour
 		{
 			this.sweeping = false;
 			this.hugging = false;
+		}
+		if (gc.pauseMenu.active == true)
+        {
+			this.hud.enabled = false;
+		}
+        else if (!this.gameOver)
+        {
+			this.hud.enabled = true;
 		}
 	}
 
@@ -126,9 +134,13 @@ public class PlayerScript : MonoBehaviour
 				this.moveDirection = new Vector3(0f, 0f, 0f);
 			}
 		}
-		this.moveDirection = new Vector3(this.moveDirection.x, 4, this.moveDirection.z);
+		this.moveDirection = new Vector3(this.moveDirection.x, this.height, this.moveDirection.z);
 		this.cc.Move(this.moveDirection);
-		//base.transform.position = new Vector3(base.transform.position.x, 4, base.transform.position.z);
+		if (this.stamina < this.maxStamina & this.moveDirection.x == 0 & this.moveDirection.z == 0) //vr breaks the old method, this works tho ^^;
+		{
+			this.stamina += this.staminaRate * Time.deltaTime;
+		}
+		base.transform.position = new Vector3(base.transform.position.x, this.height, base.transform.position.z); //dont forget to uncomment this before release!! fixes cafeteria height
 	}
 
 	// Token: 0x060009D7 RID: 2519 RVA: 0x00026210 File Offset: 0x00024610
@@ -144,10 +156,6 @@ public class PlayerScript : MonoBehaviour
 			{
 				this.stamina = -5f;
 			}
-		}
-		else if (this.stamina < this.maxStamina)
-		{
-			this.stamina += this.staminaRate * Time.deltaTime;
 		}
 		this.staminaBar.value = this.stamina / this.maxStamina * 100f;
 	}
@@ -270,6 +278,7 @@ public class PlayerScript : MonoBehaviour
 	public GameObject VRCamera;
 	private Quaternion CameraRotation;
 	public GameObject XRRig;
+	public GameObject rightController;
 
 	// Token: 0x040006E9 RID: 1769
 	public GameControllerScript gc;

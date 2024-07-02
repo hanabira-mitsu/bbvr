@@ -13,8 +13,7 @@ public class CameraScript : MonoBehaviour
 	// Token: 0x0600092E RID: 2350 RVA: 0x00020D00 File Offset: 0x0001F100
 	private void Update()
 	{
-		this.XRrig.transform.position = this.player.transform.position;
-        if (this.ps.jumpRope) //If the player is jump roping
+		if (this.ps.jumpRope) //If the player is jump roping
 		{
 			this.velocity -= this.gravity * Time.deltaTime; //Decrease the velocity using gravity
 			this.jumpHeight += this.velocity * Time.deltaTime; //Increase the jump height based on the velocity
