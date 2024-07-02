@@ -10,12 +10,12 @@ Based on [this](https://porkypowers.itch.io/baldi-open-source-classic-party) dec
 
 ## Installation
 ### PCVR
-1) Download the latest Windows zip file from the [Releases](https://github.com/mochi-mitsu/bbvr/releases/latest) page.
+1) Download the latest Windows zip file from the [Releases](https://github.com/hanabira-mitsu/bbvr/releases/latest) page.
 2) Extract the zip file.
 3) Run `Baldi's Basics Classic VR.exe`, the game should automatically run your default OpenXR runtime. 
 
 ### Quest
-1) Download the latest Android APK from [Releases](https://github.com/mochi-mitsu/bbvr/releases/latest) page.
+1) Download the latest Android APK from [Releases](https://github.com/hanabira-mitsu/bbvr/releases/latest) page.
    
 #### SideQuest
 2) Ensure headset is connected.
