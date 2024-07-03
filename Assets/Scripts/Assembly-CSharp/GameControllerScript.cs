@@ -24,6 +24,7 @@ public class GameControllerScript : MonoBehaviour
 	// Token: 0x06000964 RID: 2404 RVA: 0x00021AC4 File Offset: 0x0001FEC4
 	private void Start()
 	{
+		Hud = GameObject.Find("Hud");
 		XRRig = GameObject.Find("XR Rig");
 		if (PlayerPrefs.GetInt("LeftHanded") == 0)
 		{
@@ -33,10 +34,22 @@ public class GameControllerScript : MonoBehaviour
 		{
             rightController = GameObject.Find("RightHand Controller");
         }
-        if (PlayerPrefs.GetInt("Rumble") == 1)
+
+		SmoothTurn = (PlayerPrefs.GetInt("SmoothTurn") == 1);
+		TurnSpeed = PlayerPrefs.GetInt("MouseSensitivity");
+		xrRig = XRRig.GetComponent<XRRig>();
+
+		//If smooth turn is off, enable snap turn
+		XRRig.GetComponent<SnapTurnProvider>().enabled = !SmoothTurn;
+		if (!SmoothTurn)
 		{
-			XRRig.GetComponent<SnapTurnProvider>().enabled = false;
+			//XRRig.GetComponent<SnapTurnProvider>().turnAmount = TurnSpeed * 180;
+
         }
+		
+
+
+
         rightController.GetComponent<XRUIPointer>().enabled = false;
         rightController.GetComponent<XRInteractorLineVisual>().enabled = false;
         this.cullingMask = this.camera.cullingMask; // Changes cullingMask in the Camera
@@ -109,6 +122,15 @@ public class GameControllerScript : MonoBehaviour
 			{
 				this.IncreaseItemSelection();
 			}
+
+			//Turning
+			if (SmoothTurn)
+			{
+				float turnThisFrame = Input.GetAxis("XRI_Right_Primary2DAxis_Horizontal");
+				turnThisFrame *= TurnSpeed * 180;
+				turnThisFrame *= Time.deltaTime;
+                xrRig.RotateAroundCameraUsingRigUp(turnThisFrame);
+            }
 		}
 		else
 		{
@@ -296,7 +318,12 @@ public class GameControllerScript : MonoBehaviour
 		this.camera.cullingMask = this.cullingMask; //Sets the cullingMask to Everything
 		this.learningActive = false;
 		UnityEngine.Object.Destroy(subject);
-		this.LockMouse(); //Prevent the mouse from moving
+
+        //Show the UI if its hidden
+        Hud.SetActive(true);
+
+
+        this.LockMouse(); //Prevent the mouse from moving
 		if (this.player.stamina < 100f) //Reset Stamina
 		{
 			this.player.stamina = 100f;
@@ -573,7 +600,10 @@ public class GameControllerScript : MonoBehaviour
 
 	public GameObject rightController;
 	public GameObject XRRig;
-	private Component snapturn;
+	private XRRig xrRig;
+    private bool SmoothTurn;
+	private float TurnSpeed;
+    private GameObject Hud;
     private bool rightTriggerPulled = false;
 
     // Token: 0x040005F7 RID: 1527
@@ -793,6 +823,10 @@ public class GameControllerScript : MonoBehaviour
 	// Token: 0x04000639 RID: 1593
 	public AudioSource learnMusic;
 
-	// Token: 0x0400063A RID: 1594
-	//private Player playerInput;
+	
+
+	
+
+    // Token: 0x0400063A RID: 1594
+    //private Player playerInput;
 }

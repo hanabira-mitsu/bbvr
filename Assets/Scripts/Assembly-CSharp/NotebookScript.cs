@@ -10,6 +10,11 @@ public class NotebookScript : MonoBehaviour
 	{
 		//this.playerInput = ReInput.players.GetPlayer(0);
 		this.up = true;
+
+		if (learningGameJR == gameObject)
+		{
+			learningGameJR = learningGame;
+		}
 	}
 
 	// Token: 0x06000990 RID: 2448 RVA: 0x00024018 File Offset: 0x00022418
@@ -41,20 +46,55 @@ public class NotebookScript : MonoBehaviour
 				this.up = false;
 				this.respawnTime = 120f;
 				this.gc.CollectNotebook();
-				GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(this.learningGame);
-				gameObject.GetComponent<MathGameScript>().gc = this.gc;
-				gameObject.GetComponent<MathGameScript>().baldiScript = this.bsc;
-				gameObject.GetComponent<MathGameScript>().playerPosition = this.player.position;
-				playerCam = mainCamera.GetComponent<Camera>();
-				gameObject.GetComponent<Canvas>().worldCamera = playerCam;
-                gameObject.transform.position = new Vector3(base.transform.position.x, 6f, base.transform.position.z);
-				gameObject.transform.rotation = new Quaternion(this.player.transform.rotation.x, this.player.transform.rotation.y, this.player.transform.rotation.z, this.player.transform.rotation.w);
+				if ((PlayerPrefs.GetInt("ImmersiveNotebook") == 1) && learningGameJR!=null)
+				{
+					SummonGameJR();
+                }
+				else
+				{
+					SummonGame();
+				}
+				
 
             }
 		}
 	}
 
-	public GameObject mainCamera;
+	private void SummonGame()
+	{
+        GameObject MathUI = UnityEngine.Object.Instantiate<GameObject>(this.learningGame);
+        MathUI.GetComponent<MathGameScript>().gc = this.gc;
+        MathUI.GetComponent<MathGameScript>().baldiScript = this.bsc;
+        MathUI.GetComponent<MathGameScript>().playerPosition = this.player.position;
+        playerCam = mainCamera.GetComponent<Camera>();
+        MathUI.GetComponent<Canvas>().worldCamera = playerCam;
+        MathUI.transform.position = new Vector3(base.transform.position.x, 5.5f, base.transform.position.z);
+        MathUI.transform.rotation = new Quaternion(this.player.transform.rotation.x, this.player.transform.rotation.y, this.player.transform.rotation.z, this.player.transform.rotation.w);
+    }
+
+    private void SummonGameJR()
+    {
+		//Summon the Smaller verion of the game
+        GameObject MathUI = UnityEngine.Object.Instantiate<GameObject>(this.learningGameJR);
+        MathUI.GetComponent<MathGameScript>().gc = this.gc;
+        MathUI.GetComponent<MathGameScript>().baldiScript = this.bsc;
+        MathUI.GetComponent<MathGameScript>().playerPosition = this.player.position;
+        playerCam = mainCamera.GetComponent<Camera>();
+        MathUI.GetComponent<Canvas>().worldCamera = playerCam;
+
+		//Parent it to the You Can Think JR
+		GameObject UIAnchor = GameObject.Find("MathGameJRAnchor");
+		MathUI.transform.SetParent(UIAnchor.transform);
+        MathUI.transform.localPosition = new Vector3(0,0,0);
+        MathUI.transform.localEulerAngles = new Vector3(0,0,0);
+		MathUI.transform.localScale = new Vector3(1,1,1);
+
+        //Hide the Hud
+        GameObject Hud = GameObject.Find("Hud");
+		Hud.SetActive(false);
+    }
+
+    public GameObject mainCamera;
 
 	public Camera playerCam;
 
@@ -79,8 +119,10 @@ public class NotebookScript : MonoBehaviour
 	// Token: 0x04000670 RID: 1648
 	public GameObject learningGame;
 
-	// Token: 0x04000671 RID: 1649
-	public AudioSource audioDevice;
+    public GameObject learningGameJR;
+
+    // Token: 0x04000671 RID: 1649
+    public AudioSource audioDevice;
 
 	// Token: 0x04000672 RID: 1650
 	//private Player playerInput;
