@@ -76,7 +76,7 @@ public class BaldiScript : MonoBehaviour
 		{
 			this.agent.speed = 0f;
 		}
-		Vector3 direction = this.player.position - base.transform.position; 
+		Vector3 direction = this.player.position - (base.transform.position + Vector3.up * 2f); 
 		RaycastHit raycastHit;
 		if (Physics.Raycast(base.transform.position + Vector3.up * 2f, direction, out raycastHit, float.PositiveInfinity, 769, QueryTriggerInteraction.Ignore) & raycastHit.transform.tag == "Player") //Create a raycast, if the raycast hits the player, Baldi can see the player
 		{

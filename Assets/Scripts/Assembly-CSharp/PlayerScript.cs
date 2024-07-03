@@ -25,12 +25,26 @@ public class PlayerScript : MonoBehaviour
 		//this.CameraRotation = this.VRCamera.transform.rotation;
 	}
 
+	private void Update6DOF()
+	{
+		Transform PlayerHead = Camera.main.transform;
+		Vector2 NewOffset = new Vector2(base.transform.position.x - PlayerHead.position.x, base.transform.position.z - PlayerHead.position.z);
+		XROffset += NewOffset;
+		base.transform.position -= new Vector3(NewOffset.x,0,NewOffset.y);
+		
+        XRRig.transform.position = new Vector3(base.transform.position.x+XROffset.x, XRRig.transform.position.y, base.transform.position.z+ XROffset.y);
+		//Console.WriteLine(XROffset);
+		Debug.Log(XROffset);
+    }
+
 	// Token: 0x060009D4 RID: 2516 RVA: 0x00025D04 File Offset: 0x00024104
 	private void Update()
 	{
         this.CameraRotation = this.VRCamera.transform.rotation;
-		XRRig.transform.position = new Vector3(base.transform.position.x, XRRig.transform.position.y, base.transform.position.z);
-		base.transform.position = new Vector3(base.transform.position.x, this.height, base.transform.position.z);
+
+		Update6DOF(); //Proper 6dof updates
+
+        base.transform.position = new Vector3(base.transform.position.x, this.height, base.transform.position.z);
 		this.MouseMove();
 		this.PlayerMove();
 		this.StaminaCheck();
@@ -279,6 +293,7 @@ public class PlayerScript : MonoBehaviour
 	private Quaternion CameraRotation;
 	public GameObject XRRig;
 	public GameObject rightController;
+	private Vector2 XROffset;
 
 	// Token: 0x040006E9 RID: 1769
 	public GameControllerScript gc;

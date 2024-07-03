@@ -172,7 +172,8 @@ public class GameControllerScript : MonoBehaviour
 					PlayerPrefs.SetInt("CurrentBooks", this.notebooks);
 				}
 				Time.timeScale = 1f;
-				SceneManager.LoadScene("GameOver");
+				SceneManager.LoadSceneAsync("GameOver");
+				//SceneManager.LoadScene("GameOver");
 			}
 		}
 		if (this.finaleMode && !this.audioDevice.isPlaying && this.exitsReached == 3)

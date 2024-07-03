@@ -3,7 +3,27 @@
   "WorkspaceRootPath": "F:\\Dev\\Unity\\Projects\\bbvr\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|F:\\Dev\\Unity\\Projects\\bbvr\\assets\\scripts\\assembly-csharp\\optionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|f:\\dev\\unity\\projects\\bbvr\\assets\\scripts\\assembly-csharp\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\camerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|F:\\Dev\\Unity\\Projects\\bbvr\\assets\\scripts\\assembly-csharp\\gamecontrollerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\gamecontrollerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|f:\\dev\\unity\\projects\\bbvr\\assets\\scripts\\assembly-csharp\\baldiscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\baldiscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|f:\\dev\\unity\\projects\\bbvr\\assets\\scripts\\assembly-csharp\\startbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\startbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|f:\\dev\\unity\\projects\\bbvr\\assets\\scripts\\assembly-csharp\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|f:\\dev\\unity\\projects\\bbvr\\assets\\scripts\\assembly-csharp\\optionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\optionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,11 +31,7 @@
       "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\notebookscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|f:\\dev\\unity\\projects\\bbvr\\assets\\scripts\\assembly-csharp\\gamecontrollerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\gamecontrollerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|f:\\dev\\unity\\projects\\bbvr\\assets\\vr assets\\scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|F:\\Dev\\Unity\\Projects\\bbvr\\assets\\vr assets\\scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FD491CC-B935-4182-6143-02581B0701D2}|Assembly-CSharp.csproj|solutionrelative:assets\\vr assets\\scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "SnapTurnProvider.cs",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@0.0.6-preview\\Runtime\\Locomotion\\SnapTurn\\SnapTurnProvider.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@0.0.6-preview\\Runtime\\Locomotion\\SnapTurn\\SnapTurnProvider.cs",
@@ -59,12 +75,67 @@
               "ViewState": "AQIAADkAAAAAAAAAAAAAAFIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-03T12:10:56.636Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CameraScript.cs",
+              "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\CameraScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\CameraScript.cs",
+              "ToolTip": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\CameraScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\CameraScript.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T18:57:00.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerScript.cs",
+              "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\PlayerScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\PlayerScript.cs",
+              "ToolTip": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\PlayerScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\PlayerScript.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAgwCAAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T18:18:48.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "StartButton.cs",
+              "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\StartButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\StartButton.cs",
+              "ToolTip": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\StartButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\StartButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T18:01:38.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaldiScript.cs",
+              "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\BaldiScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\BaldiScript.cs",
+              "ToolTip": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\BaldiScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\BaldiScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T17:19:12.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "InputManager.cs",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\VR Assets\\Scripts\\InputManager.cs",
               "RelativeDocumentMoniker": "Assets\\VR Assets\\Scripts\\InputManager.cs",
@@ -72,12 +143,11 @@
               "RelativeToolTip": "Assets\\VR Assets\\Scripts\\InputManager.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAQwCkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T13:49:26.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T13:49:26.356Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "XRRig.cs",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@0.0.6-preview\\Runtime\\XR\\XRRig.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@0.0.6-preview\\Runtime\\XR\\XRRig.cs",
@@ -85,25 +155,24 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@0.0.6-preview\\Runtime\\XR\\XRRig.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T13:32:13.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T13:32:13.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "GameControllerScript.cs",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\GameControllerScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\GameControllerScript.cs",
               "ToolTip": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\GameControllerScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\GameControllerScript.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAuwFkAAAAEAAAA",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAAwIMAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-03T10:45:47.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "OptionsManager.cs",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\OptionsManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\OptionsManager.cs",
@@ -116,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "MathGameScript.cs",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\MathGameScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\MathGameScript.cs",
@@ -127,12 +196,8 @@
               "WhenOpened": "2024-07-03T10:44:41.54Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "NotebookScript.cs",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\NotebookScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\NotebookScript.cs",
@@ -140,12 +205,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\NotebookScript.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAcwDAAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T01:39:05.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T01:39:05.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "PickupAnimationScript.cs",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\Scripts\\Assembly-CSharp\\PickupAnimationScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\PickupAnimationScript.cs",
@@ -157,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "UnlitVertex.shader",
               "DocumentMoniker": "F:\\Dev\\Unity\\Projects\\bbvr\\Assets\\VR Assets\\Hand-Held Thinkpad\\UnlitVertex.shader",
               "RelativeDocumentMoniker": "Assets\\VR Assets\\Hand-Held Thinkpad\\UnlitVertex.shader",
