@@ -17,7 +17,7 @@ public class MathGameScript : MonoBehaviour
         rightController = GameObject.Find("RightHand Controller");
         rightController.GetComponent<XRUIPointer>().enabled = true;
         rightController.GetComponent<XRInteractorLineVisual>().enabled = true;
-        XRrig.GetComponent<SnapTurnProvider>().enabled = false;
+        //XRrig.GetComponent<SnapTurnProvider>().enabled = false;
         this.gc.ActivateLearningGame();
         if (this.gc.notebooks == 1)
         {
@@ -358,10 +358,10 @@ public class MathGameScript : MonoBehaviour
         }
         rightController.GetComponent<XRUIPointer>().enabled = false;
         rightController.GetComponent<XRInteractorLineVisual>().enabled = false;
-        if (PlayerPrefs.GetInt("Rumble") == 0)
+        /*if (PlayerPrefs.GetInt("Rumble") == 0)
         {
             XRrig.GetComponent<SnapTurnProvider>().enabled = true;
-        }
+        }*/
         this.gc.DeactivateLearningGame(base.gameObject);
     }
 

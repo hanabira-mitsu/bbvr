@@ -11,23 +11,10 @@ public class OptionsManager : MonoBehaviour
 		if (PlayerPrefs.HasKey("OptionsSet"))
 		{
 			slider.value = PlayerPrefs.GetFloat("MouseSensitivity");
-			if (PlayerPrefs.GetInt("Rumble") == 1)
-			{
-				rumble.isOn = true;
-			}
-			else
-			{
-				rumble.isOn = false;
-			}
-			if (PlayerPrefs.GetInt("AnalogMove") == 1)
-			{
-				analog.isOn = true;
-			}
-			else
-			{
-				analog.isOn = false;
-			}
-		}
+			SmoothTurn.isOn = (PlayerPrefs.GetInt("SmoothTurn") == 1);
+            ImmersiveNotebooks.isOn = (PlayerPrefs.GetInt("ImmersiveNotebook") == 1);
+            BSODLazer.isOn = (PlayerPrefs.GetInt("BSODLazer") == 1);
+        }
 		else
 		{
 			PlayerPrefs.SetInt("OptionsSet", 1);
@@ -38,22 +25,6 @@ public class OptionsManager : MonoBehaviour
 	private void Update()
 	{
 		PlayerPrefs.SetFloat("MouseSensitivity", slider.value);
-		if (rumble.isOn)
-		{
-			PlayerPrefs.SetInt("Rumble", 1);
-		}
-		else
-		{
-			PlayerPrefs.SetInt("Rumble", 0);
-		}
-		if (analog.isOn)
-		{
-			PlayerPrefs.SetInt("AnalogMove", 1);
-		}
-		else
-		{
-			PlayerPrefs.SetInt("AnalogMove", 0);
-		}
 		if (SmoothTurn.isOn)
 		{
 			PlayerPrefs.SetInt("SmoothTurn", 1);
@@ -62,13 +33,21 @@ public class OptionsManager : MonoBehaviour
 		{
 			PlayerPrefs.SetInt("SmoothTurn", 0);
 		}
-        if (LeftHanded.isOn)
+        if (BSODLazer.isOn)
         {
-            PlayerPrefs.SetInt("LeftHanded", 1);
+            PlayerPrefs.SetInt("BSODLazer", 1);
         }
         else
         {
-            PlayerPrefs.SetInt("LeftHanded", 0);
+            PlayerPrefs.SetInt("BSODLazer", 0);
+        }
+		if (ImmersiveNotebooks.isOn)
+		{
+			PlayerPrefs.SetInt("ImmersiveNotebook", 1);
+        }
+		else
+		{
+			PlayerPrefs.SetInt("ImmersiveNotebook", 0);
         }
 
 
@@ -77,13 +56,9 @@ public class OptionsManager : MonoBehaviour
     // Token: 0x0400006F RID: 111
     public Slider slider;
 
-	// Token: 0x04000070 RID: 112
-	public Toggle rumble;
-
-	// Token: 0x04000071 RID: 113
-	public Toggle analog;
+	public Toggle ImmersiveNotebooks;
 
 	public Toggle SmoothTurn;
 
-	public Toggle LeftHanded;
+	public Toggle BSODLazer;
 }
